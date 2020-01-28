@@ -1,8 +1,8 @@
-# LAB - 
+# LAB - Events
 
-## Project Name
+## Event Emitter
 
-### Author: Student/Group Name
+### Author: David Vloedman
 
 ### Links and Resources
 * [submission PR](https://github.com/david-vloedman-401-advanced-javascript/401-lab-16/pull/1)
