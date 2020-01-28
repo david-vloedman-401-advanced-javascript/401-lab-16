@@ -25,5 +25,5 @@ npm test
 
 #### UML
 
-![](./assets/lab16.png)
+![](./assets/Lab16.png)
 
