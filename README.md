@@ -25,4 +25,5 @@ npm test
 
 #### UML
 
+![](./assets/lab16.png)
 
