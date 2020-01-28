@@ -1,7 +1,7 @@
 'use strict';
 
 const fs = require('fs');
-const events = require('./event')
+
 
 
 /**
@@ -27,14 +27,14 @@ const read = (file, callback) => {
  * @param {function} callback
  */
 const save = (data, fileName, callback) => {  
-    const buffer = Buffer.from(data);
-    fs.writeFile(fileName, buffer, err => {
-      if (err) {
-        callback(err);
-      } else {
-        callback(undefined);
-      }
-    });
+  const buffer = Buffer.from(data);
+  fs.writeFile(fileName, buffer, err => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(undefined);
+    }
+  });
 };
 
 module.exports = { read, save };

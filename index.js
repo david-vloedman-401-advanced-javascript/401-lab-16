@@ -24,13 +24,10 @@ let saveFilePromise = util.promisify(file.save);
 // }).catch(err => events.emit('error', err));
 
 getFile(directory)
-.then(results => {
-  writeFile(results, directory)
-  .catch(err => events.emit('error', err));
-})
-
-
-
+  .then(results => {
+    writeFile(results, directory)
+      .catch(err => events.emit('error', err));
+  });
 
 /**
  * 
@@ -39,10 +36,10 @@ getFile(directory)
  */
 function getFile(directory){
   return readfilePromise(directory)
-  .then(results => {
-    events.emit('read', `Read file ${process.argv[2]}`);
-    return results.toUpperCase();    
-  }).catch(err => events.emit('error', err));  
+    .then(results => {
+      events.emit('read', `Read file ${process.argv[2]}`);
+      return results.toUpperCase();    
+    }).catch(err => events.emit('error', err));  
 }
 /**
  * 
@@ -51,9 +48,9 @@ function getFile(directory){
  */
 function writeFile(data, directory){
   return saveFilePromise(data, directory)
-  .then(results => {
-    events.emit('success', 'Process was successful');
-  })
+    .then(results => {
+      events.emit('success', 'Process was successful');
+    });
 }
 
 module.exports = getFile, writeFile;
